@@ -1,26 +1,15 @@
-//your JS code here. If required.
-const otp = document.querySelectorAll(".code");
-// console.log(otp);
+const inputs = document.querySelectorAll('.code');
 
-// console.log(otp[0]);
-// console.dir(otp[0]);
+inputs.forEach((input, idx) => {
+  input.addEventListener('input', () => {
+    if (input.value.length === 1 && idx < inputs.length - 1) {
+      inputs[idx + 1].focus();
+    }
+  });
 
-otp[0].focus();
-
-otp.forEach((num, index) => {
-    // console.log(num);
-    num.addEventListener("input", (event) => {
-        // console.log(event);
-        console.log(event.target.value);
-        if(event.target.value.length === 1 && index < otp.length - 1) {
-            otp[index + 1].focus();
-        }
-    })
-
-    num.addEventListener("keydown", (event) => {
-        // console.log(event);
-        if(event.key === "Backspace" && index > 0) {
-            otp[index - 1].focus();
-        }
-    })
-})
+  input.addEventListener('keydown', (e) => {
+    if (e.key === "Backspace" && idx > 0 && input.value === "") {
+      inputs[idx - 1].focus();
+    }
+  });
+});
