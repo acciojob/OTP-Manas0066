@@ -1,64 +1,31 @@
-/*  your css code here. If applicable */
-* {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: #f7f9fc;
-}
-
-.container {
-  background: white;
-  padding: 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 500px;
-  text-align: center;
-  border: 2px solid #ddd;
-}
-
-#verification_heading {
-  margin-bottom: 10px;
-}
-
-#verification_subtext {
-  color: #444;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.code-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.code {
-  width: 50px;
-  height: 60px;
-  text-align: center;
-  font-size: 32px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.code:focus {
-  border-color: #4a90e2;
-}
-
-.note {
-  background: #f0f0f0;
-  color: #555;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 14px;
-}
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #verification_heading {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    #verification_subtext {
+      font-size: 14px;
+      color: gray;
+      margin-bottom: 20px;
+    }
+    .code-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .code {
+      width: 40px;
+      height: 50px;
+      font-size: 24px;
+      text-align: center;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+    .code:focus {
+      border-color: #4CAF50;
+      outline: none;
+    }
